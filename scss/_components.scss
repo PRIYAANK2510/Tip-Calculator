@@ -1,0 +1,68 @@
+@use "colors" as *;
+
+/*INPUT TYPE TEXT*/
+input[type="text"] {
+  background-color: $col-neutral-200;
+  text-align: right;
+  border: none;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  color: $col-neutral-600;
+  transition: outline 50ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: 3px solid $col-primary;
+  }
+}
+
+/*BUTTON TO SELECT THE RATE*/
+.selectTipbtn {
+  padding: 0.75rem;
+  background-color: $col-neutral-600;
+  border-radius: 10px;
+  color: $col-neutral-100;
+  border: none;
+  font-size: 1.5rem;
+  transition: color, background-color 300ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $col-neutral-300;
+    color: $col-neutral-600;
+  }
+
+  &[type="number"] {
+    background-color: $col-neutral-200;
+    text-align: right;
+    color: $col-neutral-600;
+    transition: outline 50ms ease-in-out;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: 3px solid $col-primary;
+    }
+  }
+}
+.active {
+  background-color: $col-primary;
+  color: $col-neutral-600;
+}
+.peoplefieldparent-error input {
+  outline: 3px solid hsl(0, 70%, 50%);
+  &:focus {
+    outline: 3px solid hsl(0, 70%, 50%);
+  }
+}
+.peoplefieldparent-error::before {
+  content: "Can't be zero";
+  color: hsl(0, 70%, 50%);
+  position: relative;
+  float: right;
+}

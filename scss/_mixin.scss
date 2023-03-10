@@ -1,0 +1,22 @@
+$breakpoints: (
+  "mobile": 600px,
+  "desktop": 1440px,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin flex($direction: row, $jc: flex-start, $ai: normal) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+}

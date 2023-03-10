@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.2;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*Colors*/
+/*INPUT TYPE TEXT*/
+input[type=text] {
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  border: none;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  color: hsl(183, 100%, 15%);
+  transition: outline 50ms ease-in-out;
+}
+input[type=text]:hover {
+  cursor: pointer;
+}
+input[type=text]:focus {
+  outline: 3px solid hsl(172, 67%, 45%);
+}
+
+/*BUTTON TO SELECT THE RATE*/
+.selectTipbtn {
+  padding: 0.75rem;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  font-size: 1.5rem;
+  transition: color, background-color 300ms ease-in-out;
+}
+.selectTipbtn:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+.selectTipbtn[type=number] {
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  transition: outline 50ms ease-in-out;
+}
+.selectTipbtn[type=number]:hover {
+  cursor: pointer;
+}
+.selectTipbtn[type=number]:focus {
+  outline: 3px solid hsl(172, 67%, 45%);
+}
+
+.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.peoplefieldparent-error input {
+  outline: 3px solid hsl(0, 70%, 50%);
+}
+.peoplefieldparent-error input:focus {
+  outline: 3px solid hsl(0, 70%, 50%);
+}
+
+.peoplefieldparent-error::before {
+  content: "Can't be zero";
+  color: hsl(0, 70%, 50%);
+  position: relative;
+  float: right;
+}
+
+html,
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+}
+
+.web-title {
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.mainContainer {
+  background-color: hsl(0, 0%, 100%);
+  flex: auto;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+  gap: 1.75rem;
+}
+.mainContainer .inputContainer {
+  padding: 0.75rem;
+}
+.mainContainer .inputContainer div:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.mainContainer .inputContainer p {
+  color: hsl(186, 14%, 43%);
+}
+.mainContainer .inputContainer .selectTipbtns {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.mainContainer .outputContainer {
+  background-color: hsl(183, 100%, 15%);
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+  gap: 1.5rem;
+}
+.mainContainer .outputContainer .result .calc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainContainer .outputContainer .result .calc:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.mainContainer .outputContainer .result .calc .calcTitle h3 {
+  color: hsl(185, 41%, 84%);
+}
+.mainContainer .outputContainer .result .calc .calcTitle h5 {
+  color: hsl(184, 14%, 56%);
+  margin: 0.5rem 0;
+}
+.mainContainer .outputContainer .result .calc .calcAmt {
+  color: hsl(172, 67%, 45%);
+  font-size: 1.2rem;
+}
+.mainContainer .outputContainer .reset {
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  transition: background-color 300ms ease-in-out;
+}
+.mainContainer .outputContainer .reset:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+}
+
+@media (min-width: 600px) {
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .web-title {
+    margin-bottom: 4rem;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+    padding: 2rem;
+    max-height: 30rem;
+    max-width: 60rem;
+    border-radius: 25px;
+  }
+  .mainContainer .inputContainer {
+    flex: 1;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: normal;
+  }
+  .mainContainer .inputContainer .selectTipbtns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .mainContainer .outputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: normal;
+    flex: 1;
+    height: inherit;
+  }
+  .mainContainer .outputContainer .result .calc:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .mainContainer .outputContainer .result .calc .calcAmt {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=main.css.map */

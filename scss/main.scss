@@ -1,0 +1,129 @@
+@use "resets";
+@use "colors" as *;
+@use "mixin" as *;
+@use "components" as *;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+html,
+body {
+  font-family: "Space Mono", monospace;
+  background-color: $col-neutral-300;
+  @include flex(column);
+}
+.web-title {
+  color: $col-neutral-600;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.mainContainer {
+  background-color: $col-neutral-100;
+  flex: auto;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 1.5rem;
+  @include flex(column);
+  gap: 1.75rem;
+
+  .inputContainer {
+    padding: 0.75rem;
+
+    div:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+    p {
+      color: $col-neutral-500;
+    }
+    .selectTipbtns {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+  }
+  .outputContainer {
+    background-color: $col-neutral-600;
+    padding: 1.5rem;
+    border-radius: 15px;
+    @include flex(column);
+    gap: 1.5rem;
+    .result {
+      .calc {
+        @include flex(row, space-between, center);
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        .calcTitle {
+          h3 {
+            color: $col-neutral-300;
+          }
+          h5 {
+            color: $col-neutral-400;
+            margin: 0.5rem 0;
+          }
+        }
+        .calcAmt {
+          color: $col-primary;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .reset {
+      padding: 0.75rem;
+      font-size: 1.5rem;
+      background-color: $col-primary;
+      color: $col-neutral-600;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      transition: background-color 300ms ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background-color: $col-neutral-300;
+      }
+    }
+  }
+}
+
+@include breakpoint-up(mobile) {
+  html,
+  body {
+    @include flex(column, center, center);
+  }
+  .web-title {
+    margin-bottom: 4rem;
+  }
+  .mainContainer {
+    @include flex(row, center);
+    padding: 2rem;
+    max-height: 30rem;
+    max-width: 60rem;
+    border-radius: 25px;
+    .inputContainer {
+      flex: 1;
+      height: inherit;
+      @include flex(column, space-between);
+      .selectTipbtns {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    .outputContainer {
+      @include flex(column, space-between);
+      flex: 1;
+      height: inherit;
+      .result {
+        .calc {
+          &:not(:last-child) {
+            margin-bottom: 3rem;
+          }
+          .calcAmt {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
