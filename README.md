@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](https://raw.githubusercontent.com/PRIYAANK2510/Space-Tour/main/Screenshot.jpg)
+![Screenshot](https://raw.githubusercontent.com/PRIYAANK2510/Tip-Calculator/main/Screenshot.jpg)
 
 ### Links
 
-- Solution URL: https://github.com/PRIYAANK2510/Space-Tour
-- Live Site URL: https://space-tour-puce.vercel.app/
+- Solution URL: https://github.com/PRIYAANK2510/Tip-Calculator
+- Live Site URL: https://tip-calculator-rust-seven.vercel.app/
 
 ## My process
 
@@ -48,7 +48,7 @@ Users should be able to:
 
 - [SCSS docs](https://sass-lang.com/documentation/) - This helped me in developing and understanding the conscepts of scss. I am going to use scss from now on wherever I can because SCSS is so good.
 - [CSS](https://www.w3schools.com/css/) - I use this whenever I find any doubt in my CSS and found some problem in my code.
-- []
+- [Javscript DOM](https://fundamentals.generalassemb.ly/11_unit/dom-cheatsheet.html) - I found this website which has a great explanation JavaScript DOM elements
 
 ## Author
 
